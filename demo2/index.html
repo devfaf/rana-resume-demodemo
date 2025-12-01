@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رانا | قالب شخصی HTML</title>
+  <meta name="description"
+    content="قالب شخصی HTML رانا برای ساخت رزومه و پرتفولیو حرفه‌ای با طراحی مدرن، ریسپانسیو و قابل سفارشی‌سازی." />
+  <meta name="keywords" content="قالب HTML, رزومه, پرتفولیو, طراحی شخصی, قالب ریسپانسیو, قالب فارسی, رانا" />
+  <meta name="author" content="رانا | قالب شخصی HTML" />
+  <link rel="icon" href="./assets/logo/favicon.ico" type="image/ico" />
+  <link rel="stylesheet" href="./src/output.css" />
+</head>
+
+<body class="font-[var(--main-font-fa)] bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)] overflow-x-hidden">
+
+  <header class="w-full h-16 lg:h-[88px] z-50 px-4 py-4 sm:px-8 sm:px-16 lg:px-[88px] flex justify-between items-center 
+         bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] rounded-br-xl rounded-bl-xl">
+
+
+    <div class="flex w-full items-center justify-between max-w-6xl mx-auto">
+      <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse" aria-label="رفتن به صفحه اصلی">
+        <img src="./assets/logo/logo.webp" class="w-12 h-12" alt="لوگوی سایت - بازگشت به صفحه اصلی"
+          fetchpriority="high" />
+
+      </a>
+
+
+      <div class="flex items-center space-x-4 rtl:space-x-reverse gap-4">
+
+        <div id="langToggle"
+          class="relative flex w-[150px] h-10 rounded-full overflow-hidden px-1 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+
+          <span id="activePill"
+            class="absolute top-1/2 h-[80%] w-[70px] -translate-y-1/2 rounded-full bg-[var(--color-primary)] transition-all duration-300 ease-in-out"></span>
+
+
+          <button id="btnFa" class="flex-1 cursor-pointer relative z-10 font-medium transition-colors duration-200"
+            aria-label="تغییر زبان به فارسی">
+            <span class="hidden lg:block">فارسی</span>
+            <span class="block lg:hidden">FA</span>
+          </button>
+
+          <button id="btnEn" class="flex-1 cursor-pointer relative z-10 font-medium transition-colors duration-200"
+            aria-label="Change language to English">
+            <span class="hidden lg:block">English</span>
+            <span class="block lg:hidden">EN</span>
+          </button>
+
+        </div>
+
+
+
+
+        <button id="themeIcon"
+          class="relative w-10 h-10 overflow-hidden bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)] rounded-full"
+          aria-label="تغییر حالت روشن و تاریک">
+
+          <svg id="moonIcon"
+            class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all duration-500 ease-in-out cursor-pointer text-[var(--color-primary)] z-50"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-moon"></use>
+          </svg>
+
+          <svg id="sunIcon"
+            class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-all duration-500 ease-in-out cursor-pointer text-[var(--color-primary)]"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-sun"></use>
+          </svg>
+        </button>
+
+
+      </div>
+
+
+    </div>
+  </header>
+
+  <section id="intro-section"
+    class="py-8 lg:py-18 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] relative z-10 dark:bg-[var(--bg-color-dark)]">
+    <div
+      class="max-w-6xl mx-auto rounded-xl min-h-[500px] flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-4">
+
+      <div
+        class="relative max-w-md lg:space-y-8 space-y-4 items-center lg:items-start flex flex-col lg:my-auto text-center lg:text-start mt-16 md:px-6 xl:px-0">
+
+        <div
+          class="flex flex-wrap xl:flex-nowrap xl:justify-center justify-center items-center text-[var(--color-title)] dark:text-[var(--color-title-dark)] gap-2 w-fit text-center lg:justify-start px-4">
+          <span class="text-4xl lg:text-5xl xl:whitespace-nowrap">سلام، من</span>
+          <h1 id="home" class="text-4xl lg:text-5xl text-center font-medium xl:whitespace-nowrap">
+            علی محمدی
+          </h1>
+          <span class="text-4xl lg:text-5xl xl:whitespace-nowrap">هستم</span>
+        </div>
+
+        <div class="flex flex-col items-center lg:items-start gap-6 lg:gap-10">
+          <div class="flex flex-col gap-8">
+            <h2 class="text-3xl lg:text-5xl font-medium text-[var(--color-primary)] title">
+              عکاس
+            </h2>
+            <p class="text-base text-[var(--color-text)] dark:text-[var(--color-text-dark)] leading-relaxed">
+              بیش از ده سال است که با عشق به ثبت لحظه‌ها، دنیای عکاسی را دنبال می‌کنم.
+            </p>
+          </div>
+          <button
+            class="btn-animated relative cursor-pointer px-10 py-2 rounded-full bg-[var(--color-primary)] overflow-hidden flex gap-2 items-center text-[var(--color-text-dark)]"
+            aria-label="دانلود رزومه">
+            دانلود رزومه
+            <span class="icon-wrapper relative w-6 h-6">
+              <svg class="icon-down absolute w-6 h-6 text-[var(--btn-text)] stroke-2" stroke="currentColor" fill="none"
+                aria-hidden="true">
+                <use href="./assets/icons.svg#icon-download"></use>
+              </svg>
+              <svg class="icon-up absolute w-6 h-6 text-[var(--btn-text)] stroke-2" stroke="currentColor" fill="none"
+                aria-hidden="true">
+                <use href="./assets/icons.svg#icon-download"></use>
+              </svg>
+            </span>
+          </button>
+
+
+        </div>
+      </div>
+
+      <div class="relative w-[14rem] sm:w-72 lg:w-80 h-[14rem] lg:h-[28rem] group">
+
+        <div
+          class="absolute left-[0px] lg:left-[50px] lg:top-[30px] top-[40px] left-[-20px] w-full h-full rounded-xl overflow-hidden -z-10 transform transition duration-500 group-hover:scale-105 group-hover:rotate-2">
+          <img src="./assets/images/my-photo/nature.webp" alt="تصویر طبیعت"
+            class="object-cover w-full h-full select-none" fetchpriority="high" />
+        </div>
+
+
+        <div
+          class="absolute right-[-10px] lg:right-[-10px] lg:top-[-20px] top-[20px] w-full h-full rounded-xl overflow-hidden z-10 transform transition duration-500 group-hover:scale-110 group-hover:-rotate-3">
+          <img src="./assets/images/my-photo/me.webp" alt="تصویر اصلی" class="w-full h-full object-cover select-none"
+            fetchpriority="high" />
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="flex flex-col items-center gap-8 py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+
+    <div
+      class="max-w-6xl mx-auto bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] rounded-xl min-h-[500px] flex lg:flex-row flex-col justify-center custom-corner-border group">
+
+      <div class="w-full lg:w-1/3 flex items-center justify-center px-8 lg:px-12">
+        <div class="relative w-64 h-64 flex items-center justify-center">
+          <img src="./assets/images/about-me-images/about-me.webp"
+            class="w-64 h-64 md:w-74 md:h-74 object-cover transform rotate-6 transition-transform duration-500 ease-out group-hover:rotate-0 rounded-md"
+            fetchpriority="high" alt="تصویر پرتره نویسنده" />
+
+        </div>
+      </div>
+
+      <div class="w-full lg:w-2/3 text-right flex flex-col justify-center">
+        <div class="flex flex-col lg:p-10 px-6 py-6">
+
+
+          <div class="mb-6 flex flex-col lg:items-start items-center">
+            <h2 id="about" class="w-fit text-6xl font-bold text-[var(--color-primary)] title">درباره من</h2>
+          </div>
+
+
+          <p
+            class="leading-relaxed text-[var(--color-text)] dark:text-[var(--color-text-dark)] max-w-prose mb-6 text-lg">
+            من یک عکاس حرفه‌ای هستم با بیش از ۱۰ سال تجربه در ثبت لحظات خاص و طراحی قاب‌های هنری.
+            تمرکزم روی خلق تصاویر خلاقانه، باکیفیت و داستان‌گو است.
+            عاشق کشف نور و رنگ‌های تازه‌ام و همیشه دنبال راه‌های نو برای روایت بصری هستم.
+            به جزئیات اهمیت می‌دم و سعی می‌کنم هر عکس تجربه‌ای منحصر به‌فرد برای مخاطب باشه.
+            همکاری تیمی، مستندسازی و نگاه فرهنگی‌پسند از ارزش‌های کاری من هستن.
+          </p>
+
+
+          <div class="flex flex-col justify-center">
+            <div class="mb-6 flex flex-col lg:items-start items-center gap-1">
+              <h3 class="w-fit text-6xl font-bold text-[var(--color-primary)] title">مهارت‌ها</h3>
+            </div>
+
+            <div class="flex flex-wrap lg:justify-start justify-center gap-3 text-sm text-[var(--color-text)]">
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                عکاسی پرتره</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                عکاسی طبیعت</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                عکاسی صنعتی و تبلیغاتی</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                ادیت و رتوش حرفه‌ای</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                نورپردازی استودیویی</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                کار با نرم‌افزار Lightroom</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                کار با نرم‌افزار Photoshop</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                عکاسی مراسم و رویدادها</div>
+              <div
+                class="px-4 py-2 border border-[var(--color-primary)] shadow-sm rounded-full text-[var(--color-title)] dark:text-[var(--color-title-dark)]">
+                ترکیب‌بندی و قاب‌بندی هنری</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <div class="w-full mt-20 relative min-h-[500px] overflow-hidden">
+      <div class="text-center mb-12">
+        <h2 class="text-6xl font-bold text-[var(--color-primary)] title">نظرات مشتریان</h2>
+      </div>
+
+      <div id="testimonial-slider" dir="rtl"
+        class="absolute overflow-hidden rounded-xl max-w-6xl left-1/2 -translate-x-1/2 bottom-0">
+        <div id="testimonial-track"
+          class="grid grid-flow-col auto-cols-[100%] w-[341px] xl:w-full xl:auto-cols-[calc(100%/3-1rem)] gap-6">
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-primary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-1.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-secondary)]">فرشاد رضایی</span>
+                  <span class="text-sm text-[var(--color-text-dark)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary-strong)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text-dark)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-primary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-2.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-secondary)]">سامان امیری</span>
+                  <span class="text-sm text-[var(--color-text-dark)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary-strong)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text-dark)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-primary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-3.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-secondary)]">احمد احمدی</span>
+                  <span class="text-sm text-[var(--color-text-dark)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary-strong)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text-dark)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-primary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-4.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-secondary)]">نوید شاد</span>
+                  <span class="text-sm text-[var(--color-text-dark)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary-strong)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text-dark)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+
+    <div class="max-w-6xl mx-auto rounded-xl
+              min-h-[500px] flex flex-col justify-center gap-6 space-x-8 p-4 lg:p-6">
+
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center">
+          <h2 id="services" class="w-fit text-6xl font-bold text-[var(--color-primary)] title">خدمات</h2>
+
+        </div>
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full justify-center">
+
+
+        <div class="bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] rounded-xl overflow-hidden flex flex-col items-center text-center px-6 py-8 custom-corner-border 
+              max-w-sm mx-auto w-full">
+          <h3 class="text-xl font-bold text-[var(--color-title)] dark:text-[var(--color-title-dark)] mb-4">عکاسی پرتره
+          </h3>
+          <p
+            class="text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm leading-relaxed mb-6 max-w-prose">
+            ثبت لحظات خاص و چهره‌های منحصر به‌فرد با نورپردازی حرفه‌ای و قاب‌بندی هنری.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-right space-y-2 mb-8">
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              نورپردازی استودیویی</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              ادیت و رتوش حرفه‌ای</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              ترکیب‌بندی هنری</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              استفاده از لنزهای تخصصی</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span> ثبت
+              پرتره‌های خلاقانه</li>
+          </ul>
+          <a href="#contact" class="relative cursor-pointer px-6 py-2 rounded-full 
+          bg-[var(--color-primary)] overflow-hidden 
+          text-[var(--color-secondary)] flex items-center gap-2 
+          scroll-to-section 
+          transition-transform duration-300 ease-out hover:-translate-y-1" aria-label="درخواست مشاوره">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+              bg-gradient-to-r from-transparent via-white/40 to-transparent 
+              skew-x-[-20deg]" aria-hidden="true"></span>
+          </a>
+
+
+        </div>
+
+
+        <div class="bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] rounded-xl overflow-hidden flex flex-col items-center text-center px-6 py-8 custom-corner-border 
+              max-w-sm mx-auto w-full">
+          <h3 class="text-xl font-bold text-[var(--color-title)] dark:text-[var(--color-title-dark)] mb-4">عکاسی طبیعت و
+            فضای باز</h3>
+          <p
+            class="text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm leading-relaxed mb-6 max-w-prose">
+            ثبت مناظر طبیعی، سفرها و لحظات ناب با استفاده از نور طبیعی و تکنیک‌های حرفه‌ای.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-right space-y-2 mb-8">
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              عکاسی منظره و سفر</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              استفاده از فیلترهای تخصصی</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span> ثبت
+              لحظات طلوع و غروب</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              ترکیب‌بندی خلاقانه</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              ادیت رنگ و نور طبیعی</li>
+          </ul>
+          <a href="#contact" class="relative cursor-pointer px-6 py-2 rounded-full 
+          bg-[var(--color-primary)] overflow-hidden 
+          text-[var(--color-secondary)] flex items-center gap-2 
+          scroll-to-section 
+          transition-transform duration-300 ease-out hover:-translate-y-1" aria-label="درخواست مشاوره">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+              bg-gradient-to-r from-transparent via-white/40 to-transparent 
+              skew-x-[-20deg]" aria-hidden="true"></span>
+          </a>
+
+
+        </div>
+
+
+        <div class="bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] rounded-xl overflow-hidden flex flex-col items-center text-center px-6 py-8 custom-corner-border 
+              max-w-sm mx-auto w-full">
+          <h3 class="text-xl font-bold text-[var(--color-title)] dark:text-[var(--color-title-dark)] mb-4">عکاسی
+            تبلیغاتی</h3>
+          <p
+            class="text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm leading-relaxed mb-6 max-w-prose">
+            پوشش کامل مراسم، رویدادها و پروژه‌های تبلیغاتی با کیفیت بالا و نگاه هنری.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-right space-y-2 mb-8">
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              عکاسی مراسم عروسی و جشن‌ها</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              عکاسی تبلیغاتی محصولات</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span> ثبت
+              لحظات خاص و صمیمی</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              ادیت حرفه‌ای برای انتشار تجاری</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              پوشش کامل رویدادها</li>
+          </ul>
+          <a href="#contact" class="relative cursor-pointer px-6 py-2 rounded-full 
+          bg-[var(--color-primary)] overflow-hidden 
+          text-[var(--color-secondary)] flex items-center gap-2 
+          scroll-to-section 
+          transition-transform duration-300 ease-out hover:-translate-y-1" aria-label="درخواست مشاوره">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+              bg-gradient-to-r from-transparent via-white/40 to-transparent 
+              skew-x-[-20deg]" aria-hidden="true"></span>
+          </a>
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+
+    <div
+      class="max-w-6xl mx-auto rounded-xl min-h-[500px] flex flex-col justify-center items-center gap-6 space-x-8 p-6">
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center">
+          <h3 id="work-samples" class="w-fit text-6xl font-bold text-[var(--color-primary)] title">نمونه‌کارها</h3>
+        </div>
+
+
+        <div class="flex gap-10 relative" role="tablist" aria-label="بخش‌های عکاسی">
+          <button
+            class="tab relative text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="portrait" role="tab" aria-selected="true" aria-controls="panel-portrait">
+            عکاسی پرتره
+          </button>
+
+          <button
+            class="tab relative text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="nature" role="tab" aria-selected="false" aria-controls="panel-nature">
+            عکاسی طبیعت
+          </button>
+
+          <button
+            class="tab relative text-[var(--color-text)] dark:text-[var(--color-text-dark)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="events" role="tab" aria-selected="false" aria-controls="panel-events">
+            عکاسی تبلیغاتی
+          </button>
+
+
+          <span id="tab-indicator" class="absolute bottom-0 left-0 h-1 bg-[var(--color-primary)]"></span>
+        </div>
+
+      </div>
+
+
+      <div
+        class="overflow-x-auto scroll-smooth snap-x snap-mandatory w-full custom-scrollbar overflow-y-hidden flex justify-start items-start scroll-px-4 ml-0 py-2">
+        <div class="flex gap-4 w-max p-4 rounded-xl bg-[var(--color-primary)]">
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="portrait" aria-label="مشاهده جزئیات پروژه پرتره کلاسیک">
+            <img src="./assets/images/projects-images/sample-1.webp" alt="نمونه عکاسی پرتره کلاسیک"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+              loading="lazy" />
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+                text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ پرتره
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="portrait" aria-label="مشاهده جزئیات پروژه پرتره هنری">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-2.webp" alt="نمونه عکاسی پرتره هنری"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+                text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ پرتره
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="portrait" aria-label="مشاهده جزئیات پروژه پرتره تبلیغاتی">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-3.webp" alt="نمونه عکاسی پرتره تبلیغاتی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+                text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ پرتره
+            </div>
+          </a>
+
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="nature" role="tabpanel" aria-labelledby="tab-nature"
+            aria-label="مشاهده جزئیات پروژه عکاسی طبیعت کوهستان">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-4.webp" alt="نمونه عکاسی طبیعت کوهستان"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ طبیعت
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="nature" role="tabpanel" aria-labelledby="tab-nature"
+            aria-label="مشاهده جزئیات پروژه عکاسی طبیعت جنگل">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-5.webp" alt="نمونه عکاسی طبیعت جنگل"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ طبیعت
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="nature" role="tabpanel" aria-labelledby="tab-nature"
+            aria-label="مشاهده جزئیات پروژه عکاسی طبیعت ساحل">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-6.webp" alt="نمونه عکاسی طبیعت ساحل"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ طبیعت
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="events" role="tabpanel" aria-labelledby="tab-events"
+            aria-label="مشاهده جزئیات پروژه عکاسی مراسم عروسی">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-7.webp" alt="نمونه عکاسی مراسم عروسی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ مراسم
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="events" role="tabpanel" aria-labelledby="tab-events"
+            aria-label="مشاهده جزئیات پروژه عکاسی مراسم جشن تولد">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-8.webp" alt="نمونه عکاسی مراسم جشن تولد"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ مراسم
+            </div>
+          </a>
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="events" role="tabpanel" aria-labelledby="tab-events"
+            aria-label="مشاهده جزئیات پروژه عکاسی مراسم همایش">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/projects-images/sample-9.webp" alt="نمونه عکاسی مراسم همایش"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]
+              text-[var(--color-title)] dark:text-[var(--color-title-dark)] text-sm absolute bottom-2 right-2"
+              aria-hidden="true">
+              # عکاسی _ مراسم
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="flex w-full justify-center">
+        <a href="upgrade.html" class="group relative inline-flex items-center gap-2 py-2 px-8 overflow-hidden"
+          aria-label="مشاهده پروژه‌های بیشتر">
+
+          <span
+            class="text-[var(--color-title)] dark:text-[var(--color-title-dark)] group-hover:text-[var(--color-primary)] transition-colors duration-300">
+            بیشتر
+          </span>
+
+          <svg
+            class="w-6 h-6 text-[var(--color-title)] dark:text-[var(--color-title-dark)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-hover:-translate-x-1"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-arrow-left"></use>
+          </svg>
+
+          <span class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <span
+              class="absolute top-0 right-0 h-[3px] w-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 h-[3px] w-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 w-[3px] h-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:h-full"></span>
+            <span
+              class="absolute top-0 right-0 w-[3px] h-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:h-full"></span>
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+    <div class="max-w-6xl mx-auto rounded-xl min-h-[500px] flex flex-col justify-center gap-6 space-x-8 p-6">
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center">
+          <h3 id="blog" class="w-fit text-6xl font-bold text-[var(--color-primary)] title">بلاگ</h3>
+        </div>
+
+
+        <div
+          class="overflow-x-auto scroll-smooth snap-x snap-mandatory w-full custom-scrollbar overflow-y-hidden flex justify-start items-start scroll-px-4 py-2">
+
+          <div class="flex gap-4 w-max p-4 rounded-xl bg-[var(--color-primary)]">
+
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="مشاهده جزئیات مقاله ترفندهای نورپردازی در پرتره">
+              <img src="./assets/images/blog/blog-1.webp" alt="تصویر مقاله ترفندهای نورپردازی در عکاسی پرتره"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex flex-col justify-end p-4">
+                <span
+                  class="text-lg font-semibold text-[var(--color-secondary)] px-2 title bg-[var(--color-primary)]/70 w-fit"
+                  aria-hidden="true">
+                  ۱۰ آبان ۱۴۰۴
+                </span>
+                <h3
+                  class="text-2xl font-semibold text-[var(--color-secondary)] pr-2 title bg-[var(--color-primary)]/70">
+                  ترفندهای نورپردازی در پرتره
+                </h3>
+              </div>
+            </a>
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="مشاهده جزئیات مقاله رازهای عکاسی طبیعت">
+              <img src="./assets/images/blog/blog-2.webp" alt="تصویر مقاله رازهای عکاسی طبیعت"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex flex-col justify-end p-4">
+                <span
+                  class="text-lg font-semibold text-[var(--color-secondary)] px-2 title bg-[var(--color-primary)]/70 w-fit"
+                  aria-hidden="true">
+                  ۱۲ آبان ۱۴۰۴
+                </span>
+                <h3
+                  class="text-2xl font-semibold text-[var(--color-secondary)] pr-2 title bg-[var(--color-primary)]/70">
+                  رازهای عکاسی طبیعت
+                </h3>
+              </div>
+            </a>
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="مشاهده جزئیات مقاله ویرایش عکس حرفه‌ای">
+              <img src="./assets/images/blog/blog-3.webp" alt="تصویر مقاله ویرایش عکس حرفه‌ای"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex flex-col justify-end p-4">
+                <span
+                  class="text-lg font-semibold text-[var(--color-secondary)] px-2 title bg-[var(--color-primary)]/70 w-fit"
+                  aria-hidden="true">
+                  ۱۵ آبان ۱۴۰۴
+                </span>
+                <h3
+                  class="text-2xl font-semibold text-[var(--color-secondary)] pr-2 title bg-[var(--color-primary)]/70">
+                  ویرایش عکس حرفه‌ای
+                </h3>
+              </div>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex w-full justify-center">
+        <a href="upgrade.html" class="group relative inline-flex items-center gap-2 py-2 px-8 overflow-hidden"
+          aria-label="مشاهده مقالات بیشتر در بلاگ">
+
+          <span
+            class="text-[var(--color-title)] dark:text-[var(--color-title-dark)] group-hover:text-[var(--color-primary)] transition-colors duration-300">
+            بیشتر
+          </span>
+
+          <svg
+            class="w-6 h-6 text-[var(--color-title)] dark:text-[var(--color-title-dark)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-hover:-translate-x-1"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-arrow-left"></use>
+          </svg>
+
+          <span class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <span
+              class="absolute top-0 right-0 h-[3px] w-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 h-[3px] w-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute bottom-0 left-0 w-[3px] h-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:h-full"></span>
+            <span
+              class="absolute top-0 right-0 w-[3px] h-6 bg-[var(--color-primary)] transition-all duration-300 group-hover:h-full"></span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)]">
+    <div class="max-w-6xl mx-auto rounded-xl min-h-[500px] grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+
+
+      <div class="md:col-span-1 flex flex-col justify-between items-center">
+        <div class="flex flex-col justify-center items-start items-center text-center">
+          <h2 id="contact" class="w-fit text-6xl font-bold text-[var(--color-primary)] title">تماس</h2>
+        </div>
+
+        <form
+          class="flex flex-col gap-6 text-[var(--color-title)] dark:text-[var(--color-title-dark)] mt-8 bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] px-4 py-10 rounded-xl w-full">
+
+
+          <div class="relative">
+            <input type="text" id="name" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+            focus:outline-none focus:border-[var(--color-primary-strong)]" />
+            <label for="name" class="absolute right-0 top-[-10px] text-[var(--color-text)] dark:text-[var(--color-text-dark)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)] dark:text-[var(--color-text-dark)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              نام <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <div class="relative">
+            <input type="email" id="email" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+             focus:outline-none focus:border-[var(--color-primary-strong)]" />
+            <label for="email" class="absolute right-0 top-[-10px] text-[var(--color-text)] dark:text-[var(--color-text-dark)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)] dark:text-[var(--color-text-dark)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              ایمیل <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <div class="relative">
+            <textarea id="message" rows="4" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+             focus:outline-none focus:border-[var(--color-primary-strong)]"></textarea>
+            <label for="message" class="absolute right-0 top-[-10px] text-[var(--color-text)] dark:text-[var(--color-text-dark)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)] dark:text-[var(--color-text-dark)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              پیام شما <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <button type="submit" class="btn-send relative cursor-pointer px-10 py-2 rounded-md 
+               bg-[var(--color-primary)] overflow-hidden text-lg 
+               text-[var(--color-secondary)] flex justify-center gap-2" aria-label="ارسال پیام">
+            ارسال پیام
+            <span class="plane-wrapper relative w-6 h-6 overflow-hidden">
+              <span class="plane-down absolute w-6 h-6 right-0 top-[-2px]">
+                <svg class="w-6 h-6 text-[var(--btn-text)] stroke-2 -rotate-120" stroke="currentColor" fill="none"
+                  aria-hidden="true">
+                  <use href="./assets/icons.svg#icon-airplane"></use>
+                </svg>
+              </span>
+              <span class="plane-up absolute w-6 h-6 opacity-0 right-0 top-[-2px]">
+                <svg class="w-6 h-6 text-[var(--btn-text)] stroke-2 -rotate-120" stroke="currentColor" fill="none"
+                  aria-hidden="true">
+                  <use href="./assets/icons.svg#icon-airplane"></use>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+
+
+
+        </form>
+
+
+      </div>
+
+
+      <div class="md:col-span-1 flex flex-col gap-4 lg:gap-6 justify-end lg:justify-between">
+
+        <div class="flex lg:flex-row flex-col flex-wrap gap-4 justify-around mt-8">
+
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-primary)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span
+              class="text-[var(--color-title)] dark:text-[var(--color-title-dark)] font-semibold">info@example.com</span>
+          </div>
+
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-primary)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-phone"></use>
+            </svg>
+            <span
+              class="text-[var(--color-title)] dark:text-[var(--color-title-dark)] font-semibold">۰۲۱-۱۲۳۴۵۶۷۸</span>
+          </div>
+
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-primary)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-location"></use>
+            </svg>
+            <span class="text-[var(--color-title)] dark:text-[var(--color-title-dark)] font-semibold">تهران، آدرس
+              فلان</span>
+          </div>
+
+        </div>
+
+
+
+        <div class="w-full h-[300px] lg:h-[438px] rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps?q=Tehran+Milad+Tower&output=embed" class="w-full h-full border-0"
+            title="نقشه گوگل از برج میلاد تهران"></iframe>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <footer
+    class="relative text-[var(--color-title)] dark:text-[var(--color-title-dark)] bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] mt-20">
+
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-6 text-center relative z-10">
+
+      <div class="flex flex-col lg:items-center items-start gap-2">
+        <div class="flex gap-4 mt-2 flex-col items-start">
+          <h2 class="text-3xl font-semibold text-[var(--color-primary)] title">تماس با من</h2>
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)] stroke-2"
+              fill="currentColor">
+              <use href="./assets/icons.svg#icon-location"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">تهران، آدرس فلان</span>
+          </div>
+
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)] stroke-2"
+              fill="currentColor">
+              <use href="./assets/icons.svg#icon-phone"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">۰۲۱-۱۲۳۴۵۶۷۸</span>
+          </div>
+
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)] stroke-2"
+              fill="currentColor">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">info@example.com</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:items-center gap-2">
+
+        <div class="flex gap-4 mt-2 flex-col items-start">
+          <h2 class="text-3xl font-semibold text-[var(--color-primary)] title">شبکه های اجتماعی</h2>
+          <a href="#" class="flex gap-2" aria-label="باز کردن صفحه تلگرام">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)]" fill="currentColor"
+              aria-hidden="true">
+              <use href="./assets/icons.svg#icon-telegram"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">تلگرام</span>
+          </a>
+
+          <a href="#" class="flex gap-2" aria-label="باز کردن صفحه لینکدین">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)]" fill="currentColor"
+              aria-hidden="true">
+              <use href="./assets/icons.svg#icon-linkedin"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">لینکدین</span>
+          </a>
+
+          <a href="#" class="flex gap-2" aria-label="باز کردن صفحه اینستاگرام">
+            <svg class="w-6 h-6 text-[var(--color-text)] dark:text-[var(--color-text-dark)]" fill="currentColor"
+              aria-hidden="true">
+              <use href="./assets/icons.svg#icon-instagram"></use>
+            </svg>
+            <span class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">اینستاگرام</span>
+          </a>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="text-center text-sm py-4 border-t border-white/20 relative z-10 mb-18 lg:mb-0">
+      <p class="text-[var(--color-text)] dark:text-[var(--color-text-dark)]">
+        © تمامی حقوق برای
+        <a href="https://www.rtl-theme.com/author/setdesign/" target="_blank" rel="noopener noreferrer"
+          class="relative font-bold shine-text align-middle" aria-label="پروفایل setDesign">
+          setDesign
+        </a>
+
+        محفوظ است.
+      </p>
+    </div>
+
+  </footer>
+
+  <aside class="fixed z-50 w-full lg:w-24">
+
+    <div
+      class="block lg:hidden fixed bottom-0 right-0 left-0 bg-[var(--bg-color)] dark:bg-[var(--bg-color-dark)] rounded-tr-xl rounded-tl-xl">
+      <nav class="flex justify-around items-center p-2 gap-2">
+
+        <a href="#home"
+          class="glass-icon active scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش خانه">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-home"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">خانه</span>
+        </a>
+
+        <a href="#about"
+          class="glass-icon scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش درباره">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-user"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">درباره</span>
+        </a>
+
+        <a href="#services"
+          class="glass-icon scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش خدمات">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-resume"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">خدمات</span>
+        </a>
+
+        <a href="#work-samples"
+          class="glass-icon scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش نمونه‌کار">
+          <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+            class="w-7 h-7 fill-current text-[var(--color-primary)]" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-puzzle"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">نمونه‌کار</span>
+        </a>
+
+        <a href="#blog"
+          class="glass-icon scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش بلاگ">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-pen"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">بلاگ</span>
+        </a>
+
+        <a href="#contact"
+          class="glass-icon scroll-to-section flex flex-col items-center bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+          aria-label="رفتن به بخش تماس">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-mail"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)] dark:text-[var(--color-title-dark)]">تماس</span>
+        </a>
+
+      </nav>
+    </div>
+
+
+    <div class="hidden lg:flex lg:fixed right-0 top-28 h-[70vh] w-24">
+      <div class="relative h-full w-full overflow-visible rounded-l-2xl">
+        <nav class="flex flex-col justify-center items-center h-full space-y-6">
+
+          <a href="#home"
+            class="glass-icon active group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش خانه">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-home"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              خانه
+            </span>
+          </a>
+
+          <a href="#about"
+            class="glass-icon group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش درباره من">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-user"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              درباره من
+            </span>
+          </a>
+
+          <a href="#services"
+            class="glass-icon group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش خدمات">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-resume"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              خدمات
+            </span>
+          </a>
+
+          <a href="#work-samples"
+            class="glass-icon group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش نمونه‌کارها">
+            <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+              class="w-8 h-8 fill-current text-[var(--color-primary)]" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-puzzle"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              نمونه‌ کارها
+            </span>
+          </a>
+
+          <a href="#blog"
+            class="glass-icon group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش بلاگ">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-pen"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              بلاگ
+            </span>
+          </a>
+
+          <a href="#contact"
+            class="glass-icon group relative scroll-to-section bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)]"
+            aria-label="رفتن به بخش تماس">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] 
+               dark:text-[var(--color-title-dark)] text-xs whitespace-nowrap
+               bg-[var(--color-secondary)] dark:bg-[var(--color-primary-dark)] 
+               opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              تماس
+            </span>
+          </a>
+
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+
+  <div class="absolute left-0 md:top-28 top-[12rem] md:top-[13rem] w-[60px] md:w-[96px] z-10 overflow-visible">
+    <div
+      class="relative h-full w-full rounded-r-2xl flex flex-col justify-center items-center space-y-6 transform-gpu will-change-transform">
+
+      <span class="hidden lg:block line"></span>
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="باز کردن صفحه اینستاگرام">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-instagram"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="باز کردن صفحه تلگرام">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-telegram"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="باز کردن صفحه لینکدین">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+
+      <span class="hidden lg:block line"></span>
+
+    </div>
+  </div>
+
+  <button id="scrollTopBtn"
+    class="fixed lg:bottom-6 bottom-20 lg:right-6 left-4 w-12 h-12 rounded-full overflow-hidden shadow-lg flex items-center justify-center cursor-pointer z-50 bg-[var(--color-secondary)]/80 dark:bg-[var(--color-primary-dark)]"
+    aria-label="بازگشت به بالای صفحه">
+
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48" aria-hidden="true">
+      <circle id="progressCircle" cx="24" cy="24" r="22" stroke="var(--color-primary)" stroke-width="2" fill="none"
+        stroke-dasharray="138" stroke-dashoffset="138" />
+    </svg>
+
+    <span class="z-10">
+      <svg class="w-6 h-6 stroke-[var(--color-primary)] stroke-2" fill="currentColor" aria-hidden="true">
+        <use href="./assets/icons.svg#icon-arrow-up"></use>
+      </svg>
+    </span>
+  </button>
+
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+
+  <script src="./js/libs/gsap.min.js"></script>
+  <script src="./js/libs/ScrollToPlugin.js" defer></script>
+  <script src="./js/theme-toggle.js" defer></script>
+  <script src="./js/language-toggle.js" defer></script>
+  <script src="./js/work-samples-slider.js" defer></script>
+  <script src="./js/scroll-smooth.js" defer></script>
+  <script src="./js/cursor-style.js"></script>
+  <script src="./js/sidebar-menu.js"></script>
+  <script src="./js/services.js" defer></script>
+  <script src="./js/blog.js" defer></script>
+  <script src="./js/testimonial-slider.js" defer></script>
+  <script src="./js/scrollToTop.js" defer></script>
+  <script src="./js/social-media.js"></script>
+  <script src="./js/social-media-animation.js"></script>
+  <script src="./js/button-animation.js"></script>
+
+
+</body>
+
+</html>

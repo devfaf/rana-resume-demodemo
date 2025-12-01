@@ -1,0 +1,360 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* محل تغییر رنگ ها */
+/* محل تغییر فونت ها */
+:root {
+  --color-primary: #085D37;
+  --color-primary-strong: #06452A;
+  --color-secondary: #f1f1f1;
+  --bg-color: #F9F9F9;
+  --color-text: #2E2E2E;
+  --color-title: #1A1A1A;
+  --main-font-fa: 'Vazir';
+  --main-title-fa: 'Negar';
+  --main-font-en: 'Inter';
+  --color-primary-dark: #0c0c0c;
+  --bg-color-dark: #121212;
+  --color-text-dark: #E0E0E0;
+  --color-title-dark: #F5F5F5;
+}
+/* فونت عنوان ها */
+.title{
+  font-family: var(--main-title-fa);
+}
+
+html[lang="fa"] {
+  font-family: var(--main-font-fa);
+  direction: rtl;
+}
+html[lang="en"] {
+  font-family: var(--main-font-en);
+  direction: ltr;
+}
+
+/* فونت های فارسی */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../public/fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Negar';
+  src: url('../public/fonts/Negar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Diplomaat';
+  src: url('../public/fonts/Diplomaat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khateeb';
+  src: url('../public/fonts/Khateeb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url('../public/fonts/Lalezar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parvaz';
+  src: url('../public/fonts/Parvaz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  src: url('../public/fonts/Sahel.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('../public/fonts/Shabnam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sudan';
+  src: url('../public/fonts/Sudan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trafic';
+  src: url('../public/fonts/Trafic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت های انگلیسی */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/fonts/Inter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pangolin';
+  src: url('../public/fonts/Pangolin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaytoneOne';
+  src: url('../public/fonts/PaytoneOne.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('../public/fonts/PixelifySans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* استایل آیکون های سایدبار */
+.glass-icon {
+  width: 60px;
+  height: 60px;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.glass-icon svg {
+  fill: var(--color-primary);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.glass-icon.active {
+  background-color: var(--color-primary-strong);
+  transform: translateY(-5px);
+}
+.glass-icon.active svg {
+  fill: white;
+  transform: scale(1.15);
+}
+
+.glass-icon:not(.active):hover {
+  background-color: var(--color-primary-strong);
+  transform: translateY(-5px);
+}
+.glass-icon:not(.active):hover svg {
+  fill: white;
+  transform: scale(1.15);
+}
+
+
+/* انیمیشن تغییر آیکون های خورشید و ماه */
+.float-smooth {
+  animation: floatSmooth 3s ease-in-out infinite;
+}
+
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* استایل اسکرول بار */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+/* استایل cursor */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  opacity: 0.5; /* از اول شفاف */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+/* استایل برند در فوتر */
+.shine-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-text) 0%, var(--color-text) 50%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+.dark .shine-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-text-dark) 0%, var(--color-text-dark) 50%, #272727 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  20% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.line{
+  width: 2px;
+  height: 100px;
+  background-color: var(--color-primary);
+}
+
+/* استایل svg در باتن دانلود رزومه */
+.icon-up { transform: translateY(-120%); opacity: 0; }
+.icon-down { transform: translateY(0); opacity: 1; }
+
+.btn-animated:hover .icon-down {
+  animation: goDown 0.6s forwards;
+}
+.btn-animated:hover .icon-up {
+  animation: comeDown 0.6s forwards;
+}
+
+@keyframes goDown {
+  to { transform: translateY(120%); opacity: 0; }
+}
+@keyframes comeDown {
+  to { transform: translateY(0); opacity: 1; }
+}
+/* استایل svg در باتن تماس */
+.btn-send:hover .plane-down {
+  animation: planeGoDown 0.6s forwards;
+}
+
+.btn-send:hover .plane-up {
+  animation: planeComeDown 0.6s forwards;
+}
+
+@keyframes planeGoDown {
+  to { transform: translateY(120%); opacity: 0; }
+}
+
+@keyframes planeComeDown {
+  from { transform: translateY(-120%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* استایل بردر حالت دوربین */
+.custom-corner-border {
+  position: relative;
+}
+.custom-corner-border::before,
+.custom-corner-border::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 6px solid var(--color-primary);
+}
+.custom-corner-border::before {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: .7rem;
+}
+.custom-corner-border::after {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: .7rem;
+}
+/* دکمه متحرک تغییر زبان */
+#activePill {
+  position: absolute;
+  left: 0;
+}
