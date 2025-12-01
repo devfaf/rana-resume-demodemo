@@ -1,0 +1,300 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* محل تغییر رنگ ها */
+/* محل تغییر فونت ها */
+:root {
+  --color-primary: #BD8601;
+  --color-primary-strong: #DCA618;
+  --color-secondary: #f1f1f1;
+  --bg-color: #F9F9F9;
+  --color-text: #2E2E2E;
+  --color-title: #1A1A1A;
+  --main-font-fa: 'Shabnam';
+  --main-title-fa: 'IranNastaliq';
+  --main-font-en: 'Inter';
+  --color-primary-dark: #0A0A0A;
+  --bg-color-dark: #000000;
+  --color-text-dark: #E0E0E0;
+  --color-title-dark: #F5F5F5;
+}
+/* فونت عنوان ها */
+.title{
+  font-family: var(--main-title-fa);
+}
+
+.scroll-to-left{
+  direction:ltr;
+}
+
+.section-dir{
+  direction:rtl;
+}
+
+html[lang="fa"] {
+  font-family: var(--main-font-fa);
+  direction: rtl;
+}
+html[lang="en"] {
+  font-family: var(--main-font-en);
+  direction: ltr;
+}
+
+/* فونت های فارسی */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../public/fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Negar';
+  src: url('../public/fonts/Negar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Diplomaat';
+  src: url('../public/fonts/Diplomaat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khateeb';
+  src: url('../public/fonts/Khateeb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url('../public/fonts/Lalezar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parvaz';
+  src: url('../public/fonts/Parvaz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  src: url('../public/fonts/Sahel.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('../public/fonts/Shabnam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sudan';
+  src: url('../public/fonts/Sudan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trafic';
+  src: url('../public/fonts/Trafic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت مخصوص دمو 3 */
+@font-face {
+  font-family: 'IranNastaliq';
+  src: url('../public/fonts/IranNastaliq.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت های انگلیسی */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/fonts/Inter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pangolin';
+  src: url('../public/fonts/Pangolin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaytoneOne';
+  src: url('../public/fonts/PaytoneOne.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('../public/fonts/PixelifySans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* کلاس سفارشی برای اسکرول */
+.scroll-custom {
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-secondary) var(--bg-color);
+  scrollbar-gutter: stable;
+}
+.dark .scroll-custom{
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-primary-dark) var(--bg-color-dark);
+  scrollbar-gutter: stable;
+
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
+/* انیمیشن دکمه ظاهر شدن شعر */
+@keyframes poemAnim {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px rgba(124, 124, 124, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 8px 3px rgba(124, 124, 124, 0.5);
+  }
+}
+
+#poem {
+  animation: poemAnim 1.5s infinite ease-in-out;
+  -webkit-animation: poemAnim 1.5s infinite ease-in-out;
+}
+
+/* استایل حروف شعر */
+.poem-letter {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--color-text);
+}
+.dark .poem-letter {
+  color: var(--color-text);
+}
+
+.letter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0,0);
+  will-change: transform, opacity;
+}
+
+.full-sentence {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  color: var(--color-text); /* رنگ حالت عادی */
+}
+
+.dark .full-sentence {
+  color: var(--color-text-dark); /* رنگ حالت دارک */
+}
+.full-sentence {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  color: var(--color-text); /* رنگ حالت عادی */
+}
+
+.dark .full-sentence {
+  color: var(--color-text-dark); /* رنگ حالت دارک */
+}
+
+.full-sentence.visible {
+  opacity: 1;
+}
+
+/* انیمیشن باتن ها */
+.icon-up { transform: translateY(-120%); opacity: 0; }
+.icon-down { transform: translateY(0); opacity: 1; }
+
+.btn-animated:hover .icon-down {
+  animation: goDown 0.6s forwards;
+}
+.btn-animated:hover .icon-up {
+  animation: comeDown 0.6s forwards;
+}
+
+@keyframes goDown {
+  to { transform: translateY(120%); opacity: 0; }
+}
+@keyframes comeDown {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.active-link {
+  color: var(--color-primary);
+  transform: translateX(-0.5rem);
+}
+
