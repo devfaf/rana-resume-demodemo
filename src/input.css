@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* farsi fonts */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Negar';
+  src: url('../fonts/Negar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Diplomaat';
+  src: url('../fonts/Diplomaat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Khateeb';
+  src: url('../fonts/Khateeb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url('../fonts/Lalezar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parvaz';
+  src: url('../fonts/Parvaz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  src: url('../fonts/Sahel.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('../fonts/Shabnam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sudan';
+  src: url('../fonts/Sudan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trafic';
+  src: url('../fonts/Trafic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranNastaliq';
+  src: url('../fonts/IranNastaliq.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* english fonts */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangolin';
+  src: url('../fonts/Pangolin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PaytoneOne';
+  src: url('../fonts/PaytoneOne.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('../fonts/PixelifySans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-shine {
+  animation: shine 25s ease infinite;
+}
+/* فلش */
+@keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-updown {
+  animation: upDown 2.5s ease-in-out infinite;
+}
