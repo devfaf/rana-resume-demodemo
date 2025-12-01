@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+/* محل تغییر رنگ ها */
+/* محل تغییر فونت ها */
+:root {
+  --color-primary: #01FE00;
+  --color-primary-strong: #01C900;
+  --color-secondary:#121212;
+  --color-accent: #A020F0;
+  --bg-color:#0D0D0D;
+  --color-text: #808285;
+  --color-title: #fcfcfc;
+  --main-font-fa: 'Vazir';
+  --main-title-fa: 'Shabnam';
+  --main-font-en: 'Inter';
+}
+/* تغییر فونت تایتل ها */
+.title{
+  font-family: var(--main-title-fa);
+}
+
+html[lang="fa"] {
+  font-family: var(--main-font-fa);
+  direction: rtl;
+}
+html[lang="en"] {
+  font-family: var(--main-font-en);
+  direction: ltr;
+}
+
+/* فونت های فارسی */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../public/fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Negar';
+  src: url('../public/fonts/Negar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Diplomaat';
+  src: url('../public/fonts/Diplomaat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khateeb';
+  src: url('../public/fonts/Khateeb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url('../public/fonts/Lalezar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parvaz';
+  src: url('../public/fonts/Parvaz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  src: url('../public/fonts/Sahel.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('../public/fonts/Shabnam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sudan';
+  src: url('../public/fonts/Sudan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trafic';
+  src: url('../public/fonts/Trafic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت های انگلیسی */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/fonts/Inter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pangolin';
+  src: url('../public/fonts/Pangolin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaytoneOne';
+  src: url('../public/fonts/PaytoneOne.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('../public/fonts/PixelifySans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* بک گراند شفاف هدر */
+.bg-glass {
+  background-color: rgba(var(--color-secondary), 0.8);
+  backdrop-filter: blur(8px);
+}
+
+/* استایل آیکون های سایدبار */
+.glass-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-secondary);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.glass-icon svg {
+  fill: var(--color-primary);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+.glass-icon.active {
+  background-color: var(--color-primary-strong);
+  transform: translateY(-5px);
+}
+.glass-icon.active svg {
+  fill: white;
+  transform: scale(1.15);
+}
+.glass-icon:not(.active):hover {
+  background-color: var(--color-primary-strong);
+  transform: translateY(-5px);
+}
+.glass-icon:not(.active):hover svg {
+  fill: white;
+  transform: scale(1.15);
+}
+
+/* حرکت آیکون های ماه و خورشید */
+.float-smooth {
+  animation: floatSmooth 3s ease-in-out infinite;
+}
+
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* استایل کرسر صفحه اول */
+#typed-title::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-right: 6px;
+  background-color: gray;
+  vertical-align: bottom;
+  opacity: 1;
+}
+
+/* انیمیشن چشمک‌زن کرسر */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+#typed-title.blinking::after {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+/* استایل اسکرول بار */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+/* استایل cursor pointer */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  opacity: 0.5;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+/* استایل برند در فوتر */
+.shine-text {
+  position: relative;
+  display: inline-block;
+  color: var(--color-text);
+  background: linear-gradient(90deg, var(--color-text) 0%, var(--color-text) 50%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  20% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+

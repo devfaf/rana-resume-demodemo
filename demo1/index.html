@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رانا | قالب شخصی HTML</title>
+  <meta name="description"
+    content="قالب شخصی HTML رانا برای ساخت رزومه و پرتفولیو حرفه‌ای با طراحی مدرن، ریسپانسیو و قابل سفارشی‌سازی." />
+  <meta name="keywords" content="قالب HTML, رزومه, پرتفولیو, طراحی شخصی, قالب ریسپانسیو, قالب فارسی, رانا" />
+  <meta name="author" content="رانا | قالب شخصی HTML" />
+  <link rel="icon" href="./assets/logo/favicon.ico" type="image/ico" />
+  <link rel="stylesheet" href="./src/output.css" />
+</head>
+
+<body class="overflow-x-hidden font-[var(--main-font-fa)] bg-[var(--bg-color)]">
+
+  <header
+    class="fixed top-0 right-0 w-full h-16 lg:h-[88px] z-50 px-4 py-4 sm:px-8 sm:px-16 lg:px-[88px] flex justify-between items-center">
+
+    <div class="flex w-full items-center justify-between max-w-6xl mx-auto">
+      <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse" aria-label="صفحه اصلی">
+        <img src="./assets/logo/logo.webp" class="w-12 h-12" alt="لوگو شرکت">
+      </a>
+
+
+      <div id="langToggle" class="relative flex w-[152px] py-2 h-full">
+        <span id="underline"
+          class="absolute bottom-0 left-0 h-[2px] bg-[var(--color-primary)] shadow-[0_2px_10px_var(--color-primary)] transition-all duration-200"></span>
+        <button id="btnFa" aria-label="فارسی"
+          class="flex-1 cursor-pointer relative z-10 font-medium transition-transform duration-200">
+          <span class="hidden lg:block">فارسی</span>
+          <span class="block lg:hidden">FA</span>
+        </button>
+
+        <button id="btnEn" aria-label="English"
+          class="flex-1 cursor-pointer relative z-10 font-medium transition-transform duration-200">
+          <span class="hidden lg:block">English</span>
+          <span class="block lg:hidden">EN</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <section id="intro-section" class="py-12 lg:py-20 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)] lg:my-10 mt-20">
+    <div
+      class="max-w-6xl mx-auto rounded-xl min-h-[500px] flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-4 lg:gap-0">
+
+      <div
+        class="relative max-w-md lg:space-y-8 space-y-4 items-center lg:items-start flex flex-col my-auto text-center lg:text-start">
+        <div class="absolute top-[-50px] md:top-[-100px] right-6 md:right-0">
+          <svg class="w-16 h-16 md:w-28 md:h-28 text-[var(--bg-color)]" fill="currentColor">
+            <use href="./assets/icons.svg#icon-code"></use>
+          </svg>
+        </div>
+
+
+        <div
+          class="flex flex-row justify-center items-center text-[var(--color-title)] gap-2 w-fit text-center lg:justify-start mt-2 lg:mt-0">
+          <span class="text-4xl xl:text-6xl" fetchpriority="high">من</span>
+          <h1 id="home" class="text-4xl xl:text-6xl text-center font-medium w-full whitespace-nowrap" fetchpriority="high">
+            علی محمدی
+          </h1>
+          <span class="text-4xl xl:text-6xl" fetchpriority="high">هستم</span>
+        </div>
+
+        <div class="flex flex-col items-center lg:items-start gap-8 lg:gap-10">
+          <div class="flex flex-col gap-8">
+            <h2 id="typed-title" class="text-2xl lg:text-4xl font-medium text-[var(--color-primary)] title" fetchpriority="high">
+              برنامه‌نویس وب
+            </h2>
+            <p class="text-base text-[var(--color-text)] leading-relaxed">
+              توسعه‌دهنده قالب‌های شخصی و رزومه‌محور با تمرکز بر طراحی مدرن، ریسپانسیو و تجربه کاربری حرفه‌ای.
+            </p>
+          </div>
+          <button
+            class="shine-btn relative cursor-pointer px-10 py-2 rounded-md 
+           bg-[var(--color-accent)] overflow-hidden text-lg text-[var(--color-title)] font-medium flex gap-2 justify-center items-center w-fit"
+            aria-label="دانلود رزومه">
+            دانلود روزمه
+            <svg class="w-6 h-6 text-[var(--color-title)] stroke-2" stroke="currentColor" fill="none">
+              <use href="./assets/icons.svg#icon-download"></use>
+            </svg>
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+                 bg-gradient-to-r from-transparent via-white/40 to-transparent 
+                 skew-x-[-20deg]"></span>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div class="relative w-48 sm:w-54 lg:w-md aspect-square">
+
+
+          <div class="absolute inset-0 bg-[var(--color-primary)] rounded-xl transform rotate-6"></div>
+
+
+          <div class="relative w-full h-full overflow-hidden rounded-xl z-10">
+
+            <canvas id="matrixRain" class="absolute right-0 inset-0 w-full h-full z-0"></canvas>
+
+
+            <div class="relative z-10 flex items-end justify-center w-full h-full rounded-xl">
+              <img src="./assets/images/my-photo/me.webp" alt="تصویر اصلی"
+                class="object-contain w-[90%] h-[90%] select-none rounded-xl" fetchpriority="high"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+
+
+  <section class="flex flex-col items-center gap-8 py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)]">
+
+    <div
+      class="max-w-6xl mx-auto bg-[var(--color-secondary)] rounded-xl min-h-[500px] flex lg:flex-row flex-col justify-center">
+
+
+      <div class="w-full lg:w-1/3 flex justify-center items-center p-0 mt-2 lg:mt-0">
+        <img src="./assets/images/about-me-images/about-me.webp" alt="تصویر من"
+          class="h-[300px] lg:h-full object-cover select-none rounded-xl lg:rounded-tr-xl lg:rounded-br-xl lg:rounded-bl-none lg:rounded-tl-none p-2 lg:p-0"
+          loading="lazy" />
+      </div>
+
+
+      <div class="w-full lg:w-2/3 text-right space-y-6 flex flex-col justify-center">
+
+        <div class="flex flex-col space-y-6 lg:px-4 lg:py-2 px-8 py-4 mb-4 lg:mb-0">
+          <div class="flex flex-col">
+            <div class="mb-8 flex flex-col lg:items-start items-center gap-1">
+              <h2 id="about" class="w-fit text-4xl font-bold text-[var(--color-title)] pr-1.5 title">درباره من</h2>
+
+              <svg class="w-38 h-4 text-[var(--color-primary)]">
+                <use href="./assets/icons.svg#icon-title-line"></use>
+              </svg>
+            </div>
+
+
+            <p class="leading-relaxed text-[var(--color-text)]">
+              من یک برنامه‌نویس و طراح رابط کاربری هستم با بیش از ۴ سال تجربه در توسعه وب و طراحی قالب‌های حرفه‌ای.
+              تمرکزم روی ساخت رابط‌های کاربرپسند، ریسپانسیو و قابل توسعه است.
+              عاشق یادگیری تکنولوژی‌های جدیدم و همیشه دنبال راه‌حل‌های خلاقانه برای چالش‌های طراحی هستم.
+              به جزئیات اهمیت می‌دم و سعی می‌کنم تجربه کاربری رو تا حد ممکن بهبود بدم.
+              همکاری تیمی، مستندسازی و طراحی فرهنگی‌پسند از ارزش‌های کاری من هستن.
+            </p>
+          </div>
+
+
+          <div class="flex flex-col justify-center">
+            <div class="mb-8 flex flex-col lg:items-start items-center gap-1">
+              <h3 class="w-fit text-3xl font-bold text-[var(--color-title)] title">مهارت‌ها</h3>
+            </div>
+
+            <div class="flex flex-wrap lg:justify-start justify-center gap-4 text-sm text-gray-800">
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                HTML & CSS
+              </div>
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                JavaScript
+              </div>
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                React
+              </div>
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                Tailwind CSS
+              </div>
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                Figma
+              </div>
+              <div
+                class="px-4 py-2 border border-[var(--color-accent)] shadow-sm rounded-full text-[var(--color-title)]">
+                Git & GitHub
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="w-full mt-20 relative min-h-[500px] overflow-hidden">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[var(--color-title)] title">نظرات مشتریان</h2>
+        <svg class="w-38 h-4 text-[var(--color-primary)] mx-auto mt-2">
+          <use href="./assets/icons.svg#icon-title-line"></use>
+        </svg>
+      </div>
+
+      <div id="testimonial-slider" dir="rtl"
+        class="absolute overflow-hidden rounded-xl max-w-6xl left-1/2 -translate-x-1/2 bottom-0">
+        <div id="testimonial-track"
+          class="grid grid-flow-col auto-cols-[100%] w-[341px] xl:w-full xl:auto-cols-[calc(100%/3-1rem)] gap-4">
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-secondary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-1.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-title)]">فرشاد رضایی</span>
+                  <span class="text-sm text-[var(--color-text)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-secondary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-2.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-title)]">سامان امیری</span>
+                  <span class="text-sm text-[var(--color-text)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-secondary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-3.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-title)]">احمد احمدی</span>
+                  <span class="text-sm text-[var(--color-text)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+
+          <div class="testimonial-card rounded-xl p-8 space-y-6 bg-[var(--color-secondary)]">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-4 w-full">
+
+                <div class="basis-1/3 flex-shrink-0 rounded-full">
+                  <img src="./assets/images/customer-images/cutomer-4.webp" alt="تصویر مشتری ۱"
+                    class="rounded-full object-cover object-center w-[65px] h-[65px]" loading="lazy" />
+                </div>
+
+
+                <div class="basis-2/3 flex flex-col gap-2">
+                  <span class="text-xl text-[var(--color-title)]">نوید شاد</span>
+                  <span class="text-sm text-[var(--color-text)] whitespace-nowrap">
+                    مدیر استارتاپ فناوری
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-end text-[var(--color-primary)] mt-2">
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5" fill="currentColor">
+                  <use href="./assets/icons.svg#icon-solid-star"></use>
+                </svg>
+                <svg class="w-4 lg:w-5 h-4 lg:h-5 stroke-2">
+                  <use href="./assets/icons.svg#icon-outline-star"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="text-base text-[var(--color-text)] leading-relaxed">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+              متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+              جامعه
+              و متخصصان را می طلبد. </p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)]">
+
+    <div class="max-w-6xl mx-auto bg-[var(--color-secondary)] rounded-xl
+              min-h-[500px] flex flex-col justify-center gap-6 space-x-8 p-4 lg:p-6">
+
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center gap-1">
+          <h2 id="services" class="w-fit text-4xl font-bold text-[var(--color-title)] title">خدمات</h2>
+
+          <svg class="w-38 h-4 text-[var(--color-primary)]">
+            <use href="./assets/icons.svg#icon-title-line"></use>
+          </svg>
+        </div>
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 w-full items-stretch">
+
+
+        <div class="bg-[var(--bg-color)] rounded-xl overflow-hidden flex flex-col items-center text-center p-4">
+          <img src="./assets/images/services-images/services-1.webp" alt="توسعه فرانت‌اند"
+            class="w-38 h-38 object-cover mb-2 select-none" loading="lazy" />
+          <h3 class="text-xl font-bold text-[var(--color-title)] mb-2">توسعه فرانت‌اند</h3>
+          <p class="text-[var(--color-text)] text-sm leading-relaxed mb-4">
+            طراحی رابط‌های کاربری مدرن با React و Tailwind، کاملاً ریسپانسیو و قابل توسعه.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] text-right space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              طراحی کامپوننت‌های قابل استفاده مجدد
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              پیاده‌سازی ریسپانسیو کامل
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              اتصال به API و مدیریت وضعیت
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              استفاده از state management مدرن
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              طراحی بدون اسکرول افقی و overflow
+            </li>
+          </ul>
+          <a href="#contact"
+            class="shine-btn relative cursor-pointer px-6 py-2 rounded-full bg-[var(--color-primary)] overflow-hidden text-[var(--color-secondary)] font-bold flex items-center gap-2 scroll-to-section"
+            aria-label="درخواست مشاوره" role="link" tabindex="0">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+    bg-gradient-to-r from-transparent via-white/40 to-transparent 
+    skew-x-[-20deg]"></span>
+          </a>
+
+        </div>
+
+
+        <div class="bg-[var(--bg-color)] rounded-xl overflow-hidden flex flex-col items-center text-center p-4">
+          <img src="./assets/images/services-images/services-2.webp" alt="طراحی UI/UX"
+            class="w-38 h-38 object-cover mb-2 select-none" loading="lazy" />
+          <h3 class="text-xl font-bold text-[var(--color-title)] mb-2">طراحی UI/UX</h3>
+          <p class="text-[var(--color-text)] text-sm leading-relaxed mb-4">
+            طراحی قالب‌های حرفه‌ای، مینیمال و فارسی‌پسند با تمرکز بر تجربه کاربری و زیبایی بصری.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] text-right space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              طراحی رزومه و قالب‌های فروشگاهی
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              رعایت اصول تایپوگرافی فارسی
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              طراحی مینیمال و بدون اسکرول افقی
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              استفاده از نیم‌فاصله و فونت‌های استاندارد
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              طراحی تعاملی با افکت‌های ظریف و حرفه‌ای
+            </li>
+          </ul>
+          <a href="#contact"
+            class="shine-btn relative cursor-pointer px-6 py-2 rounded-full bg-[var(--color-primary)] overflow-hidden text-[var(--color-secondary)] font-bold flex items-center gap-2 scroll-to-section"
+            aria-label="درخواست مشاوره" role="link" tabindex="0">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+    bg-gradient-to-r from-transparent via-white/40 to-transparent 
+    skew-x-[-20deg]"></span>
+          </a>
+
+        </div>
+
+
+        <div class="bg-[var(--bg-color)] rounded-xl overflow-hidden flex flex-col items-center text-center p-4">
+          <img src="./assets/images/services-images/services-3.webp" alt="بهینه‌سازی و مستندسازی"
+            class="w-38 h-38 object-cover mb-2 select-none" loading="lazy" />
+          <h3 class="text-xl font-bold text-[var(--color-title)] mb-2">توسعه اپلیکیشن موبایل</h3>
+          <p class="text-[var(--color-text)] text-sm leading-relaxed mb-4">
+            بهینه‌سازی کد، مستندسازی کامل و آماده‌سازی پروژه برای توسعه‌پذیری و فروش تجاری.
+          </p>
+          <ul class="text-sm text-[var(--color-text)] text-right space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              اپ‌های مستندسازی‌شده و قابل توسعه
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              بهینه‌سازی تصاویر و فونت‌ها
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              آماده‌ فروش و انتشار تجاری
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              کدنویسی تمیز و ساختارمند
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--color-primary)]"></span>
+              رابط کاربری روان و واکنش‌گرا
+            </li>
+          </ul>
+
+
+
+          <a href="#contact"
+            class="shine-btn relative cursor-pointer px-6 py-2 rounded-full bg-[var(--color-primary)] overflow-hidden text-[var(--color-secondary)] font-bold flex items-center gap-2 scroll-to-section"
+            aria-label="درخواست مشاوره" role="link" tabindex="0">
+            درخواست مشاوره
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+    bg-gradient-to-r from-transparent via-white/40 to-transparent 
+    skew-x-[-20deg]"></span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)]">
+
+    <div
+      class="max-w-6xl mx-auto bg-[var(--color-secondary)] rounded-xl min-h-[500px] flex flex-col justify-center items-center gap-6 space-x-8 p-6">
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center gap-1">
+          <h2 id="work-samples" class="w-fit text-4xl font-bold text-[var(--color-title)] title">نمونه‌کارها</h2>
+          <svg class="w-38 h-4 text-[var(--color-primary)]">
+            <use href="./assets/icons.svg#icon-title-line"></use>
+          </svg>
+        </div>
+
+
+        <div class="flex gap-10 relative">
+          <button class="tab relative text-[var(--color-text)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="frontend" aria-label="توسعه فرانت‌اند">توسعه فرانت‌اند</button>
+
+          <button class="tab relative text-[var(--color-text)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="uiux" aria-label="طراحی UI/UX">طراحی UI/UX</button>
+
+          <button class="tab relative text-[var(--color-text)] text-sm pb-2 transition-colors cursor-pointer font-bold"
+            data-tab="mobile" aria-label="اپلیکیشن موبایل">اپلیکیشن موبایل</button>
+
+
+          <span id="tab-indicator" class="absolute bottom-0 left-0 h-1 bg-[var(--color-primary)]"></span>
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="overflow-x-auto scroll-smooth snap-x snap-mandatory w-full custom-scrollbar overflow-y-hidden flex justify-start items-start scroll-px-4 ml-0">
+
+        <div class="flex gap-4 w-max p-4 bg-[var(--bg-color)] rounded-xl">
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="frontend" aria-label="جزئیات پروژه" role="link">
+
+            <img src="./assets/images/work-samples-images/sample-1.webp" alt="سایت فروشگاهی"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+              loading="lazy" />
+
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">سایت فروشگاهی</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">
+                  طراحی فروشگاه آنلاین با دسته‌بندی محصولات، سبد خرید و پرداخت امن.
+                </p>
+              </div>
+            </div>
+
+          </a>
+
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="frontend" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-2.webp" alt="سایت شرکتی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">سایت شرکتی</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">معرفی خدمات و تیم شرکت با طراحی رسمی و فرم تماس
+                  حرفه‌ای.
+                </p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="frontend" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-3.webp" alt="صفحه فرود تبلیغاتی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">صفحه فرود تبلیغاتی</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">کمپین جذب مشتری با CTA واضح و طراحی رنگی جذاب.
+                </p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="uiux" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-4.webp" alt="داشبورد مدیریتی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">داشبورد مدیریتی</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">نمایش آمار و نمودارهای تعاملی برای مدیریت
+                  پروژه‌ها.</p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="uiux" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-5.webp" alt="اپلیکیشن مالی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">اپلیکیشن مالی</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">مدیریت تراکنش‌ها با رابط کاربری امن و خوانا.
+                </p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="uiux" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-6.webp" alt="پروفایل کاربر"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">پروفایل کاربر</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">صفحه شخصی‌سازی‌شده با اطلاعات و تنظیمات کاربر.
+                </p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="mobile" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-7.webp" alt="فرم تماس با ما"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">اپلیکیشن گردشگری</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">فرم ساده با نقشه و اطلاعات تماس برای ارتباط
+                  سریع.</p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="mobile" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-8.webp" alt="فرم ثبت‌نام"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">اپلیکیشن خرید و فروش طلا</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">فرم چندمرحله‌ای با اعتبارسنجی و طراحی
+                  کاربرپسند.</p>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="upgrade.html"
+            class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+            data-category="mobile" aria-label="جزئیات پروژه" role="link">
+            <div class="w-full h-[70%] overflow-hidden">
+              <img src="./assets/images/work-samples-images/sample-9.webp" alt="صفحه بلاگ فارسی"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 z-0"
+                loading="lazy" />
+            </div>
+            <div class="absolute right-0 bottom-[10px] w-full flex items-center justify-center z-10 h-[30%]">
+              <div
+                class="bg-black/70 backdrop-blur-sm w-full mx-3 rounded-xl p-3 h-full flex flex-col justify-center gap-2">
+                <h4 class="text-base font-semibold text-[var(--color-title)]">اپلیکیشن افزایش نرخ کاربران</h4>
+                <p class="text-sm text-[var(--color-text)] leading-snug">طراحی بلاگ با تایپوگرافی فارسی حرفه‌ای و
+                  دسته‌بندی
+                  موضوعی
+                  برای خوانایی بهتر.</p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+
+      </div>
+      <div class="flex w-full justify-center">
+        <a href="upgrade.html"
+          class="group relative inline-flex items-center gap-2 transition-transform duration-300 hover:scale-105"
+          aria-label="مشاهده همه پروژه‌ها" role="link" tabindex="0">
+
+          <span class="text-[var(--color-title)] group-hover:text-[var(--color-primary)]">بیشتر</span>
+
+
+          <svg
+            class="w-6 h-6 text-[var(--color-title)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-hover:-translate-x-1"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-arrow-left"></use>
+          </svg>
+
+
+          <span class="absolute left-0 -bottom-[6px] w-full h-[2px] bg-[var(--color-primary)] 
+                 shadow-[0_2px_8px_var(--color-primary)]
+                 transform scale-x-0 origin-center
+                 transition-transform duration-300
+                 group-hover:scale-x-100"></span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)]">
+    <div
+      class="max-w-6xl mx-auto bg-[var(--color-secondary)] rounded-xl min-h-[500px] flex flex-col justify-center gap-6 space-x-8 p-6">
+
+      <div class="ml-0 flex flex-col justify-center items-center gap-4">
+        <div class="my-6 flex flex-col items-center gap-1">
+          <h2 id="blog" class="w-fit text-4xl font-bold text-[var(--color-title)] title">بلاگ</h2>
+          <svg class="w-38 h-4 text-[var(--color-primary)]">
+            <use href="./assets/icons.svg#icon-title-line"></use>
+          </svg>
+        </div>
+
+
+        <div
+          class="overflow-x-auto scroll-smooth snap-x snap-mandatory w-full custom-scrollbar overflow-y-hidden flex justify-start items-start scroll-px-4">
+
+          <div class="flex gap-4 w-max p-4 bg-[var(--bg-color)] rounded-xl">
+
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="جزئیات مقاله: هوش مصنوعی در سال ۲۰۲۶">
+              <img src="./assets/images/blog/blog-1.webp" alt="هوش مصنوعی در سال ۲۰۲۶"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-200 flex flex-col justify-end p-4">
+                <span class="text-xs text-gray-200 mb-1">۱۰ آبان ۱۴۰۴</span>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">هوش مصنوعی در سال ۲۰۲۶</h3>
+                <p class="text-sm text-gray-200">نگاهی به آینده‌ی فناوری‌های هوش مصنوعی و تأثیر آن بر زندگی روزمره.</p>
+              </div>
+            </a>
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="جزئیات مقاله: تحولات دنیای سخت‌افزار">
+              <img src="./assets/images/blog/blog-2.webp" alt="سخت‌افزار"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-200 flex flex-col justify-end p-4">
+                <span class="text-xs text-gray-200 mb-1">۱۲ آبان ۱۴۰۴</span>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">تحولات دنیای سخت‌افزار</h3>
+                <p class="text-sm text-gray-200">بررسی جدیدترین پیشرفت‌ها در پردازنده‌ها، کارت‌های گرافیک و تجهیزات
+                  ذخیره‌سازی.</p>
+              </div>
+            </a>
+
+            <a href="upgrade.html"
+              class="relative shrink-0 snap-start w-[341px] h-[320px] rounded-xl overflow-hidden cursor-pointer group card"
+              aria-label="جزئیات مقاله: امنیت سایت و داده‌ها">
+              <img src="./assets/images/blog/blog-3.webp" alt="امنیت سایت"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-200 flex flex-col justify-end p-4">
+                <span class="text-xs text-gray-200 mb-1">۱۵ آبان ۱۴۰۴</span>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">امنیت سایت و داده‌ها</h3>
+                <p class="text-sm text-gray-200">روش‌های نوین برای محافظت از وب‌سایت‌ها در برابر حملات سایبری و نفوذ.
+                </p>
+              </div>
+            </a>
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex w-full justify-center">
+        <a href="upgrade.html"
+          class="group relative inline-flex items-center gap-2 transition-transform duration-300 hover:scale-105 justify-center"
+          aria-label="مشاهده مطالب بیشتر در وبلاگ">
+
+          <span class="text-[var(--color-title)] group-hover:text-[var(--color-primary)]">بیشتر</span>
+
+          <svg
+            class="w-6 h-6 text-[var(--color-title)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-hover:-translate-x-1"
+            fill="currentColor" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-arrow-left"></use>
+          </svg>
+
+          <span class="absolute left-0 -bottom-[6px] w-full h-[2px] bg-[var(--color-primary)] 
+    shadow-[0_2px_8px_var(--color-primary)]
+    transform scale-x-0 origin-center
+    transition-transform duration-300
+    group-hover:scale-x-100"></span>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="py-20 px-4 sm:px-8 sm:px-16 lg:px-22 bg-[var(--bg-color)]">
+    <div
+      class="max-w-6xl mx-auto bg-[var(--color-secondary)] rounded-xl min-h-[500px] grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+
+
+      <div class="md:col-span-1 flex flex-col justify-between">
+        <div class="flex flex-col justify-center lg:items-start items-center">
+          <div class="flex flex-col items-center justify-center gap-1 w-full">
+            <h2 id="contact" class="w-full text-4xl text-center font-bold text-[var(--color-title)] title">تماس</h2>
+
+            <svg class="w-38 h-4 text-[var(--color-primary)]">
+              <use href="./assets/icons.svg#icon-title-line"></use>
+            </svg>
+          </div>
+        </div>
+
+        <form class="flex flex-col gap-6 text-[var(--color-title)] mt-8">
+
+
+          <div class="relative">
+            <input type="text" id="name" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+            focus:outline-none focus:border-[var(--color-primary-strong)]" />
+            <label for="name" class="absolute right-0 top-[-10px] text-[var(--color-text)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              نام <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <div class="relative">
+            <input type="email" id="email" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+             focus:outline-none focus:border-[var(--color-primary-strong)]" />
+            <label for="email" class="absolute right-0 top-[-10px] text-[var(--color-text)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              ایمیل <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <div class="relative">
+            <textarea id="message" rows="4" required class="peer w-full border-b-2 border-[var(--color-text)] bg-transparent pt-5 pb-2 
+             focus:outline-none focus:border-[var(--color-primary-strong)]"></textarea>
+            <label for="message" class="absolute right-0 top-[-10px] text-[var(--color-text)] transition-all duration-200
+             peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-text)]
+             peer-focus:top-0 peer-focus:text-sm peer-focus:text-[var(--color-primary)]">
+              پیام شما <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+
+          <button type="submit"
+            class="shine-btn relative cursor-pointer px-10 py-2 rounded-md 
+         bg-[var(--color-accent)] overflow-hidden text-lg text-[var(--color-title)] font-medium flex gap-2 justify-center"
+            aria-label="ارسال پیام">
+            ارسال پیام
+            <span class="shine absolute top-0 left-[-60%] w-2/3 h-full 
+                 bg-gradient-to-r from-transparent via-white/40 to-transparent 
+                 skew-x-[-20deg]"></span>
+          </button>
+        </form>
+
+
+      </div>
+
+
+      <div class="md:col-span-2 flex flex-col gap-6 justify-between">
+
+        <div class="flex lg:flex-row flex-col gap-4 justify-around mt-8">
+
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span class="text-[var(--color-title)] font-medium">info@example.com</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-phone"></use>
+            </svg>
+            <span class="text-[var(--color-title)] font-medium">۰۲۱-۱۲۳۴۵۶۷۸</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-location"></use>
+            </svg>
+            <span class="text-[var(--color-title)] font-medium">تهران، آدرس فلان</span>
+          </div>
+
+        </div>
+
+
+        <div class="w-full h-[300px] rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps?q=Tehran+Milad+Tower&output=embed" class="w-full h-full border-0"
+            title="نقشه برج میلاد تهران" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <footer class="relative text-[var(--color-title)] bg-[var(--color-secondary)] mt-20">
+
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-6 text-center relative z-10">
+
+      <div class="flex flex-col lg:items-center items-start gap-2">
+        <div class="flex gap-4 mt-2 flex-col items-start">
+          <h2 class="text-xl font-semibold title">تماس با من</h2>
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-location"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">تهران، آدرس فلان</span>
+          </div>
+
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-phone"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">۰۲۱-۱۲۳۴۵۶۷۸</span>
+          </div>
+
+          <div class="flex gap-2">
+            <svg class="w-6 h-6 text-[var(--color-title)] stroke-2" fill="currentColor">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">info@example.com</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:items-center gap-2">
+
+        <div class="flex gap-4 mt-2 flex-col items-start">
+          <h2 class="text-xl font-semibold title">شبکه‌های اجتماعی</h2>
+          <a href="#" class="flex gap-2" aria-label="تلگرام">
+            <svg class="w-6 h-6 text-[var(--color-title)]" fill="currentColor" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-telegram"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">تلگرام</span>
+          </a>
+
+          <a href="#" class="flex gap-2" aria-label="لینکدین">
+            <svg class="w-6 h-6 text-[var(--color-title)]" fill="currentColor" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-linkedin"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">لینکدین</span>
+          </a>
+
+          <a href="#" class="flex gap-2" aria-label="اینستاگرام">
+            <svg class="w-6 h-6 text-[var(--color-title)]" fill="currentColor" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-instagram"></use>
+            </svg>
+            <span class="text-[var(--color-text)]">اینستاگرام</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="text-center text-sm py-4 border-t border-white/20 relative z-10 mb-18 lg:mb-0">
+      <p class="text-[var(--color-text)]">
+        © تمامی حقوق برای
+        <a href="https://www.rtl-theme.com/author/setdesign/" target="_blank" rel="noopener noreferrer"
+          class="relative font-bold shine-text align-middle" aria-label="مشاهده پروفایل setDesign در RTL Theme">
+          setDesign
+        </a>
+
+        محفوظ است.
+      </p>
+    </div>
+
+  </footer>
+
+  <aside class="fixed z-50 w-full lg:w-24">
+
+    <div class="block lg:hidden fixed bottom-0 left-0 right-0 bg-[var(--bg-color)]">
+      <nav class="flex justify-around items-center py-2">
+
+        <a href="#home" class="glass-icon active scroll-to-section flex flex-col items-center" aria-label="خانه">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-home"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">خانه</span>
+        </a>
+
+        <a href="#about" class="glass-icon scroll-to-section flex flex-col items-center" aria-label="درباره">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-user"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">درباره</span>
+        </a>
+
+        <a href="#services" class="glass-icon scroll-to-section flex flex-col items-center" aria-label="خدمات">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-resume"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">خدمات</span>
+        </a>
+
+        <a href="#work-samples" class="glass-icon scroll-to-section flex flex-col items-center" aria-label="نمونه‌کار">
+          <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+            class="w-7 h-7 fill-current text-[var(--color-primary)]" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-puzzle"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">نمونه‌کار</span>
+        </a>
+
+        <a href="#blog" class="glass-icon scroll-to-section flex flex-col items-center" aria-label="بلاگ">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-pen"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">بلاگ</span>
+        </a>
+
+        <a href="#contact" class="glass-icon scroll-to-section flex flex-col items-center" aria-label="تماس">
+          <svg class="w-7 h-7" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-mail"></use>
+          </svg>
+          <span class="text-[10px] text-[var(--color-title)]">تماس</span>
+        </a>
+
+      </nav>
+    </div>
+
+
+    <div class="hidden lg:flex lg:fixed right-0 top-28 h-[70vh] w-24">
+      <div class="relative h-full w-full overflow-visible rounded-l-2xl">
+        <nav class="flex flex-col justify-center items-center h-full space-y-6">
+
+          <a href="#home" class="glass-icon active group relative scroll-to-section" aria-label="خانه">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-home"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              خانه
+            </span>
+          </a>
+
+          <a href="#about" class="glass-icon group relative scroll-to-section" aria-label="درباره من">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-user"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              درباره من
+            </span>
+          </a>
+
+          <a href="#services" class="glass-icon group relative scroll-to-section" aria-label="خدمات">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-resume"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              خدمات
+            </span>
+          </a>
+
+          <a href="#work-samples" class="glass-icon group relative scroll-to-section" aria-label="نمونه‌ کارها">
+            <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+              class="w-8 h-8 fill-current text-[var(--color-primary)]" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-puzzle"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              نمونه‌ کارها
+            </span>
+          </a>
+
+          <a href="#blog" class="glass-icon group relative scroll-to-section" aria-label="بلاگ">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-pen"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              بلاگ
+            </span>
+          </a>
+
+          <a href="#contact" class="glass-icon group relative scroll-to-section" aria-label="تماس">
+            <svg class="w-8 h-8" aria-hidden="true">
+              <use href="./assets/icons.svg#icon-mail"></use>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 rounded-md text-[var(--color-title)] text-xs whitespace-nowrap
+    bg-[var(--color-secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              تماس
+            </span>
+          </a>
+
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+
+  <div class="absolute left-0 md:top-28 top-0 h-[70vh] w-[60px] md:w-[90px] z-40 overflow-visible">
+    <div
+      class="relative h-full w-full rounded-r-2xl flex flex-col justify-center items-center space-y-6 transform-gpu will-change-transform">
+
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="اینستاگرام">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-instagram"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="تلگرام">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-telegram"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="transition-transform duration-200 hover:scale-110 hover:-translate-y-[5px]"
+        aria-label="لینکدین">
+        <svg
+          class="w-6 h-6 fill-current text-[var(--color-primary)] hover:text-[var(--color-primary-strong)] transition-colors duration-200"
+          aria-hidden="true">
+          <use href="./assets/icons.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+
+
+  <button id="scrollTopBtn"
+    class="fixed bottom-20 lg:bottom-6 lg:right-6 left-3 sm:left-8 md:left-12 w-12 h-12 rounded-full overflow-hidden shadow-lg flex items-center justify-center cursor-pointer z-50 bg-[var(--color-secondary)]/80"
+    aria-label="بازگشت به بالا" aria-hidden="false" aria-pressed="false">
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48">
+      <circle id="progressCircle" cx="24" cy="24" r="22" stroke="var(--color-primary)" stroke-width="2" fill="none"
+        stroke-dasharray="138" stroke-dashoffset="138" />
+    </svg>
+    <span class="z-10">
+      <svg class="w-6 h-6 stroke-[var(--color-primary)]" fill="currentColor">
+        <use href="./assets/icons.svg#icon-arrow-up"></use>
+      </svg>
+    </span>
+  </button>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+
+  <script src="./js/libs/gsap.min.js"></script>
+  <script src="./js/libs/ScrollToPlugin.js" defer></script>
+  <script src="./js/header-glass-bg.js"></script>
+  <script src="./js/buttons.js"></script>
+  <script src="./js/language-toggle.js" defer></script>
+  <script src="./js/work-samples-slider.js" defer></script>
+  <script src="./js/scroll-smooth.js"></script>
+  <script src="./js/cursor-style.js"></script>
+  <script src="./js/typing-effect.js"></script>
+  <script src="./js/sidebar-menu.js"></script>
+  <script src="./js/matrix-effect.js"></script>
+  <script src="./js/services.js" defer></script>
+  <script src="./js/blog.js" defer></script>
+  <script src="./js/testimonial-slider.js" defer></script>
+  <script src="./js/scrollToTop.js" defer></script>
+  <script src="./js/social-media.js"></script>
+  <script src="./js/social-media-animation.js"></script>
+
+
+</body>
+
+</html>
